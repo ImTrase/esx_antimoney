@@ -8,8 +8,8 @@ local function checkWhitelisted(target)
     local xPlayer = ESX.GetPlayerFromId(target)
     if (not xPlayer) then return end
 
-    for i = 1, #cfg.whitelisted_groups do
-        local sel = cfg.whitelisted_groups[i]
+    for i = 1, #cfg?.whitelisted_groups do
+        local sel = cfg?.whitelisted_groups[i]
 
         if (xPlayer.getGroup() == sel) then
             return true
@@ -34,7 +34,7 @@ local function checkAllPlayers()
                         name = sel.name
                     } 
 
-                    if (account.money >= cfg.maxMoney) then
+                    if (account.money >= cfg?.maxMoney) then
                         local reason = ('%s (Id - %s) had $%s (%s), there money has been reset.'):format(xPlayer.getName(), xPlayer.source, account.money, account.label)
                         print(('^1%s'):format(reason)
                         xPlayer.removeAccountMoney(account.name, account.money)
@@ -50,7 +50,7 @@ end
 CreateThread(function()
     while (true) do
         checkAllPlayers()
-        Wait(cfg.checkTime * 1000)
+        Wait(cfg?.checkTime * 1000)
     end
 end)
 
@@ -71,7 +71,7 @@ function discordlog(desc)
         ['description'] = desc
     }
 
-    PerformHttpRequest(cfg.webhook, function(err, text, headers) end, 'POST', json.encode({
+    PerformHttpRequest(cfg?.webhook, function(err, text, headers) end, 'POST', json.encode({
         username = 'Trase#0001', 
         avatar_url = 'https://i.imgur.com/i4v7thW.png', 
         embeds = { embed } }), { ['Content-Type'] = 'application/json' 
