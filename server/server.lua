@@ -1,6 +1,4 @@
--- If you use ESX legacy, you can load this through the manifest or use an export, I reccommend you do so, it's faster.
-local ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+local ESX <const> = exports.es_extended:getSharedObject()
 
 local function checkWhitelisted(target)
     if (not target) then return end
