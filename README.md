@@ -1,4 +1,4 @@
-# t-antimoney
+# esx_antimoney
 A fivem script (ESX) to stop modders from having to much money.
 
 # Features
@@ -10,7 +10,7 @@ A fivem script (ESX) to stop modders from having to much money.
 
 # Instalation
 ```
-1) Download the "t-antimoney" resource
-2) Drag the "t-antimoney" into your resources (rename resource if you wish)
-3) Start "t-antimoney"
+1) Download the "esx_antimoney" resource
+2) Drag the "esx_antimoney" into your resources (rename resource if you wish)
+3) Start "esx_antimoney"
 ```
