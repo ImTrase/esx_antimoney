@@ -4,9 +4,9 @@ A fivem script (ESX) to stop modders from having to much money.
 # Features
 - Fully server-sided (modders can't stop the resource)
 - Webhooks
-- Checks all ESX accounts (money, bank, and dirty)
+- Checks all ESX accounts (money, bank, and black_money)
 - Easy config
-- Change the amount of money easy
+- Set the cap amount easily for each account.
 
 # Instalation
 ```
